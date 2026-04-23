@@ -12,21 +12,36 @@
       background: #fff;
       line-height: 1.6;
     }
+
+    /* Confirmation banner for users arriving from email verification */
+    .confirm-banner {
+      display: none;
+      text-align: center;
+      padding: 14px 20px;
+      background: #34a853;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .confirm-banner.visible { display: block; }
+
+    /* Hero */
     .hero {
       text-align: center;
       padding: 80px 20px 60px;
       background: linear-gradient(135deg, #e8f0fe 0%, #f0e6ff 100%);
     }
     .hero h1 {
-      font-size: 42px;
+      font-size: 44px;
       font-weight: 800;
       margin-bottom: 16px;
       color: #1a1a1a;
+      letter-spacing: -0.5px;
     }
     .hero p {
       font-size: 18px;
       color: #555;
-      max-width: 560px;
+      max-width: 580px;
       margin: 0 auto 32px;
     }
     .cta-btn {
@@ -38,72 +53,155 @@
       border-radius: 10px;
       font-size: 16px;
       font-weight: 600;
-      transition: background 0.2s;
+      transition: background 0.2s, transform 0.15s;
     }
-    .cta-btn:hover { background: #3367d6; }
-    .features {
-      max-width: 800px;
+    .cta-btn:hover { background: #3367d6; transform: translateY(-1px); }
+    .hero-sub {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #888;
+    }
+
+    /* How it works */
+    .how-it-works {
+      max-width: 860px;
       margin: 0 auto;
-      padding: 60px 20px;
+      padding: 70px 20px;
     }
-    .features h2 {
+    .section-title {
       text-align: center;
-      font-size: 28px;
-      margin-bottom: 40px;
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #1a1a1a;
+    }
+    .section-subtitle {
+      text-align: center;
+      font-size: 16px;
+      color: #777;
+      margin-bottom: 48px;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 28px;
+    }
+    .step {
+      text-align: center;
+      padding: 28px 20px;
+      background: #f8f9fa;
+      border-radius: 14px;
+    }
+    .step-icon {
+      font-size: 36px;
+      margin-bottom: 14px;
+    }
+    .step h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #1a73e8;
+    }
+    .step p {
+      font-size: 14px;
+      color: #666;
+    }
+    .step kbd {
+      display: inline-block;
+      background: #e8f0fe;
+      padding: 2px 8px;
+      border-radius: 5px;
+      font-size: 12px;
+      font-family: inherit;
+      color: #1a73e8;
+      font-weight: 600;
+    }
+
+    /* Features */
+    .features {
+      background: #f8f9fa;
+      padding: 70px 20px;
+    }
+    .features-inner {
+      max-width: 920px;
+      margin: 0 auto;
     }
     .feature-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
     }
-    .feature {
-      padding: 24px;
-      background: #f8f9fa;
-      border-radius: 12px;
+    .feature-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: transform 0.2s;
     }
-    .feature h3 {
-      font-size: 16px;
-      margin-bottom: 8px;
-      color: #1a73e8;
+    .feature-card:hover { transform: translateY(-2px); }
+    .feature-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
     }
-    .feature p {
+    .feature-card h3 {
+      font-size: 17px;
+      margin-bottom: 6px;
+      color: #1a1a1a;
+    }
+    .feature-card p {
       font-size: 14px;
       color: #666;
+      line-height: 1.6;
     }
-    .pricing {
+
+    /* Languages */
+    .languages {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 70px 20px;
       text-align: center;
-      padding: 60px 20px;
-      background: #f8f9fa;
     }
-    .pricing h2 {
-      font-size: 28px;
-      margin-bottom: 40px;
+    .lang-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 32px;
+    }
+    .lang-tag {
+      padding: 6px 14px;
+      background: #f0f0f0;
+      border-radius: 20px;
+      font-size: 13px;
+      color: #555;
+    }
+
+    /* Pricing */
+    .pricing {
+      background: #f8f9fa;
+      text-align: center;
+      padding: 70px 20px;
     }
     .plans {
       display: flex;
       justify-content: center;
-      gap: 24px;
+      gap: 28px;
       flex-wrap: wrap;
+      margin-top: 12px;
     }
     .plan {
       background: #fff;
-      border-radius: 12px;
-      padding: 32px;
+      border-radius: 14px;
+      padding: 36px;
       width: 280px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
       text-align: left;
     }
-    .plan.pro {
-      border: 2px solid #1a73e8;
-    }
-    .plan h3 {
-      font-size: 20px;
-      margin-bottom: 4px;
-    }
+    .plan.pro { border: 2px solid #1a73e8; }
+    .plan h3 { font-size: 20px; margin-bottom: 4px; }
     .plan .price {
-      font-size: 32px;
+      font-size: 36px;
       font-weight: 800;
-      margin: 12px 0;
+      margin: 14px 0;
       color: #1a73e8;
     }
     .plan .price span {
@@ -111,12 +209,18 @@
       font-weight: 400;
       color: #888;
     }
+    .plan .alt-price {
+      font-size: 15px;
+      color: #666;
+      margin-top: -8px;
+      margin-bottom: 12px;
+    }
     .plan ul {
       list-style: none;
-      margin-top: 16px;
+      margin-top: 18px;
     }
     .plan ul li {
-      padding: 6px 0;
+      padding: 7px 0;
       font-size: 14px;
       color: #555;
     }
@@ -125,6 +229,27 @@
       color: #34a853;
       font-weight: 700;
     }
+    .plan-cta {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      padding: 12px;
+      background: #4285f4;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+    .plan-cta:hover { background: #3367d6; }
+    .plan-cta.secondary {
+      background: #f0f0f0;
+      color: #333;
+    }
+    .plan-cta.secondary:hover { background: #e0e0e0; }
+
+    /* Footer */
     .footer {
       text-align: center;
       padding: 40px 20px;
@@ -135,8 +260,12 @@
       color: #4285f4;
       text-decoration: none;
     }
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 28px; }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 30px; }
+      .hero p { font-size: 16px; }
+      .steps { grid-template-columns: 1fr; }
       .feature-grid { grid-template-columns: 1fr; }
       .plans { flex-direction: column; align-items: center; }
     }
@@ -144,56 +273,157 @@
 </head>
 <body>
 
-  <div class="hero">
-    <h1>Screenshot Translator</h1>
-    <p>Capture any text on your screen and translate it instantly. Works on websites, videos, images — anything visible.</p>
-    <a href="#" class="cta-btn">Add to Chrome — It's Free</a>
+  <!-- Banner shown after email confirmation -->
+  <div class="confirm-banner" id="confirmBanner">
+    Email confirmed! You're all set. Open the extension in Chrome to start translating.
   </div>
 
-  <div class="features">
-    <h2>How It Works</h2>
-    <div class="feature-grid">
-      <div class="feature">
-        <h3>1. Press the shortcut</h3>
-        <p>Hit Cmd+Shift+X (or click the extension icon) to activate the capture mode.</p>
+  <div class="hero">
+    <h1>Screenshot Translator</h1>
+    <p>Capture any text on your screen and translate it instantly. Works on websites, videos, images, PDFs — anything visible.</p>
+    <a href="https://chromewebstore.google.com/detail/screenshot-translator/odbeafjpjnkmogdkkibehnpdcddpekod" class="cta-btn">Add to Chrome — It's Free</a>
+    <p class="hero-sub">Free to use. No credit card required. 30-day full trial included.</p>
+  </div>
+
+  <!-- How it works -->
+  <div class="how-it-works">
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-subtitle">Three steps. A few seconds. Any language.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-icon">1</div>
+        <h3>Press the shortcut</h3>
+        <p>Hit <kbd>Cmd+Shift+X</kbd> on Mac or <kbd>Ctrl+Shift+X</kbd> on Windows to activate capture mode.</p>
       </div>
-      <div class="feature">
-        <h3>2. Select the area</h3>
-        <p>Drag to select any region of your screen containing text.</p>
+      <div class="step">
+        <div class="step-icon">2</div>
+        <h3>Select the area</h3>
+        <p>Drag to select any region of your screen that contains text you want to translate.</p>
       </div>
-      <div class="feature">
-        <h3>3. Instant translation</h3>
-        <p>Text is extracted and translated in seconds. A floating popup shows the result.</p>
-      </div>
-      <div class="feature">
-        <h3>4. Save words</h3>
-        <p>Click any word to add it to your personal dictionary for later review.</p>
+      <div class="step">
+        <div class="step-icon">3</div>
+        <h3>Read the translation</h3>
+        <p>A floating popup shows the original text and translation. Copy it, save words, or dismiss.</p>
       </div>
     </div>
   </div>
 
+  <!-- All Features -->
+  <div class="features">
+    <div class="features-inner">
+      <h2 class="section-title">Everything You Get</h2>
+      <p class="section-subtitle">All features available from day one — free and Pro.</p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">Screenshot Translate</div>
+          <h3>Translate Any Text on Screen</h3>
+          <p>Capture any region of your screen — websites, images, videos, PDFs, even text inside apps. OCR extracts the text and translates it instantly.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">Auto Detect</div>
+          <h3>Smart Language Detection</h3>
+          <p>Automatically detects the source language from page content, including Cyrillic, CJK, Arabic, and more. No manual switching needed.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">Dictionary</div>
+          <h3>Click-to-Save Dictionary</h3>
+          <p>Click any word in a translation to save it to your personal dictionary. Words sync across devices through your account.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">Flashcards</div>
+          <h3>Lesson Mode</h3>
+          <p>Practice your saved words with interactive flashcards. Flip cards, mark words as known, and build your vocabulary over time.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">Streaks</div>
+          <h3>Daily Streaks & Growing Cat</h3>
+          <p>Maintain a daily practice streak and watch your virtual cat evolve through 8 stages over the course of a year. Keep learning to keep it growing!</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">Shortcuts</div>
+          <h3>Keyboard Shortcuts</h3>
+          <p><strong>Cmd+Shift+X</strong> to capture & translate. <strong>Cmd+Shift+Z</strong> to show the last translation again. Fast and efficient.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">Popup</div>
+          <h3>Quick Popup Access</h3>
+          <p>Click the extension icon to see your last translation, switch languages, open your dictionary, or start a lesson — all in one popup.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">Cloud Sync</div>
+          <h3>Cloud Sync</h3>
+          <p>Your dictionary and progress sync across all your Chrome browsers. Log in on any device and pick up where you left off.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Languages -->
+  <div class="languages">
+    <h2 class="section-title">30+ Languages Supported</h2>
+    <p class="section-subtitle">Translate between any of these languages in either direction.</p>
+    <div class="lang-list">
+      <span class="lang-tag">English</span>
+      <span class="lang-tag">Ukrainian</span>
+      <span class="lang-tag">Russian</span>
+      <span class="lang-tag">German</span>
+      <span class="lang-tag">French</span>
+      <span class="lang-tag">Spanish</span>
+      <span class="lang-tag">Italian</span>
+      <span class="lang-tag">Portuguese</span>
+      <span class="lang-tag">Polish</span>
+      <span class="lang-tag">Dutch</span>
+      <span class="lang-tag">Japanese</span>
+      <span class="lang-tag">Korean</span>
+      <span class="lang-tag">Chinese (Simplified)</span>
+      <span class="lang-tag">Chinese (Traditional)</span>
+      <span class="lang-tag">Arabic</span>
+      <span class="lang-tag">Turkish</span>
+      <span class="lang-tag">Vietnamese</span>
+      <span class="lang-tag">Thai</span>
+      <span class="lang-tag">Hindi</span>
+      <span class="lang-tag">Czech</span>
+      <span class="lang-tag">Swedish</span>
+      <span class="lang-tag">Danish</span>
+      <span class="lang-tag">Finnish</span>
+      <span class="lang-tag">Greek</span>
+      <span class="lang-tag">Hungarian</span>
+      <span class="lang-tag">Romanian</span>
+      <span class="lang-tag">Slovak</span>
+      <span class="lang-tag">Bulgarian</span>
+      <span class="lang-tag">Croatian</span>
+      <span class="lang-tag">Norwegian</span>
+    </div>
+  </div>
+
+  <!-- Pricing -->
   <div class="pricing">
-    <h2>Simple Pricing</h2>
+    <h2 class="section-title">Simple Pricing</h2>
+    <p class="section-subtitle">All features included on every plan. Start free, upgrade when you need more.</p>
     <div class="plans">
       <div class="plan">
         <h3>Free</h3>
         <div class="price">$0</div>
         <ul>
-          <li>10 translations per day</li>
+          <li>25 translations/day (first 30 days)</li>
+          <li>10 translations/day after trial</li>
+          <li>500 character limit per translation</li>
+          <li>All features included</li>
           <li>30+ languages</li>
-          <li>Fullscreen support</li>
-          <li>Sound notifications</li>
         </ul>
+        <a href="https://chromewebstore.google.com/detail/screenshot-translator/odbeafjpjnkmogdkkibehnpdcddpekod" class="plan-cta secondary">Get Started Free</a>
       </div>
       <div class="plan pro">
         <h3>Pro</h3>
-        <div class="price">$5 <span>/ month</span></div>
+        <div class="price">$1.49 <span>/ month</span></div>
+        <p class="alt-price">or $14.99 / year (save 16%)</p>
         <ul>
           <li>Unlimited translations</li>
-          <li>Personal dictionary</li>
-          <li>Cloud sync across devices</li>
-          <li>Priority support</li>
+          <li>4000 character limit per translation</li>
+          <li>All features included</li>
+          <li>Support the developer</li>
         </ul>
+        <a href="https://chromewebstore.google.com/detail/screenshot-translator/odbeafjpjnkmogdkkibehnpdcddpekod" class="plan-cta">Upgrade to Pro</a>
       </div>
     </div>
   </div>
@@ -203,5 +433,14 @@
     <p style="margin-top: 8px;">&copy; 2026 Screenshot Translator. All rights reserved.</p>
   </div>
 
+  <script>
+    // Show confirmation banner if user arrived from email verification
+    if (window.location.hash.includes('confirmation') ||
+        window.location.search.includes('type=signup') ||
+        window.location.search.includes('type=email') ||
+        window.location.hash.includes('access_token')) {
+      document.getElementById('confirmBanner').classList.add('visible');
+    }
+  </script>
 </body>
 </html>
